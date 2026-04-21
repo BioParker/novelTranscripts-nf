@@ -1,0 +1,2 @@
+2026-04-20 11:10:58	2.1s	shrivelled_curry	ERR	b0608330b852a4a3b16e9591d4d5b65c	a00d4c05-01f2-4dce-a461-d2748b7ae6e6	nextflow run pipeline_novelTranscripts.nf
+2026-04-20 11:25:53	3.3s	prickly_wegener	ERR	ac23fa53f5391ca0c660d332d89aacaf	6e2cb0d1-addc-468a-82d6-62f04e682842	nextflow run pipeline_novelTranscripts.nf

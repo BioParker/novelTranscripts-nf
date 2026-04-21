@@ -1,0 +1,26 @@
+{
+  "models": {
+     "description": "path to transcript models gtf output from IsoQuant",
+     "optional": false
+  },
+  "model_tpms": {
+     "description": "path to model transcript tpms output from IsoQuant",
+     "optional": false
+  },
+  "refgtf": {
+     "description": "path to gencode reference gtf",
+     "optional": false
+  },
+  "spliceCont": {
+     "description": "container image for suppa and bedtools + dependencies",
+     "optional": false
+  },
+  "rCont": {
+     "description": "container image for R tasks, optparse, rtracklayer + dependencies",
+     "optional": false
+  },
+  "outdir": {
+     "description": "directory in which to place process outputs. If running on AWS, should be set to /mnt/workflow/pubdir",
+     "optional": false
+  }
+}

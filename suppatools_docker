@@ -1,0 +1,33 @@
+FROM python:3.12-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    wget \
+    gcc \
+    g++ \
+    make \
+    zlib1g-dev \
+    libbz2-dev \
+    liblzma-dev \
+    dos2unix \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -OL https://github.com/arq5x/bedtools2/releases/download/v2.31.0/bedtools.static \
+    && mv bedtools.static /usr/local/bin/bedtools \
+    && chmod +x /usr/local/bin/bedtools
+
+RUN pip install --no-cache-dir \
+                numpy \
+                pandas \
+                scipy \
+                statsmodels \
+                scikit-learn
+
+RUN wget https://github.com/comprna/SUPPA/archive/refs/tags/v2.4.tar.gz \
+    && tar -zxvf v2.4.tar.gz \
+    && mv SUPPA-2.4 /usr/local/suppa \
+    && chmod +x /usr/local/suppa/suppa.py \
+    && rm v2.4.tar.gz
+
+
